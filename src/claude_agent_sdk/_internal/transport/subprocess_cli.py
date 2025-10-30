@@ -279,6 +279,7 @@ class SubprocessCLITransport(Transport):
 
             # For backward compat: use debug_stderr file object if no callback and debug is on
             stderr_dest = PIPE if should_pipe_stderr else None
+            print(process_env)
 
             self._process = await anyio.open_process(
                 cmd,
