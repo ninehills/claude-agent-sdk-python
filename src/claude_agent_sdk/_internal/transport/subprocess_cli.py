@@ -258,6 +258,7 @@ class SubprocessCLITransport(Transport):
             await self._check_claude_version()
 
         cmd = self._build_command()
+        print(cmd)
         try:
             # Merge environment variables: system -> user -> SDK required
             process_env = {
